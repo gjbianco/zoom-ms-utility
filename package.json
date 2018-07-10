@@ -1,0 +1,39 @@
+{
+  "name": "zoom-ms-utility",
+  "version": "1.0.0",
+  "description": "Online Zoom MS-50G/MS-60B/MS-70CDR multi stomp patch editor.",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack --mode development",
+    "start": "npm run build && http-server . -a 0.0.0.0",
+    "watch": "nodemon",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gjbianco/zoom-ms-utility.git"
+  },
+  "author": "Guy Bianco IV <gjbiancoiv@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/gjbianco/zoom-ms-utility/issues"
+  },
+  "homepage": "https://github.com/gjbianco/zoom-ms-utility#readme",
+  "dependencies": {
+    "@webcomponents/webcomponentsjs": "~1.2.0",
+    "jszip": "~3.1.5"
+  },
+  "devDependencies": {
+    "http-server": "~0.11.1",
+    "nodemon": "~1.17.5",
+    "webpack": "~4.15.1",
+    "webpack-command": "~0.4.1"
+  },
+  "nodemonConfig": {
+    "ext": "js,html,css",
+    "exec": "npm start",
+    "ignore": [
+      "www/dist"
+    ]
+  }
+}
